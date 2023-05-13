@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+    <input type="submit" value="submit">
+    <h1>Weather for {{shortname}}  {{weather.country}}</h1>
+    <p>Temperature: {{ weather.temperature }}</p>
+    <p>Humidity: {{ weather.humidity }}</p>
+    <p>Description: {{ weather.description }}</p>
+
+    </form>
+</body>
+</html>
+
